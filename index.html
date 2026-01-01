@@ -1,0 +1,194 @@
+# ALNASAR ISLAMIC SCHOOL
+
+## 5-Page Consistent School Website (HTML + CSS + JavaScript)
+
+This is a **5-page style website** (Home, About, Classes, Gallery, Contact) built using:
+
+* ✅ **HTML** (structure)
+* ✅ **CSS** (design)
+* ✅ **JavaScript** (navigation + Next/Back)
+
+All pages are **consistent**, images are **school-related**, and layout is **professional**.
+
+---
+
+## 📄 How Pages Work
+
+* Technically **one file**, but behaves like **5 pages**
+* Navigation menu + **Next / Back buttons**
+* Easy to upload online
+
+---
+
+## 🌐 index.html (COMPLETE CODE)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ALNASAR ISLAMIC SCHOOL</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f2f5f9}
+header{background:#1565c0;color:#fff;text-align:center;padding:22px}
+nav{background:#0d47a1;text-align:center;padding:10px}
+nav a{color:#fff;margin:10px;text-decoration:none;font-weight:bold}
+.container{max-width:1100px;margin:20px auto;background:#fff;border-radius:10px;box-shadow:0 10px 25px rgba(0,0,0,.1)}
+.page{display:none;padding:30px}
+.page.active{display:block}
+.row{display:flex;gap:30px;align-items:center}
+.text{flex:1}
+.image{flex:1;text-align:center}
+.image img{width:100%;max-width:420px;height:250px;object-fit:cover;border-radius:10px}
+h2{color:#1565c0;margin-top:0}
+.controls{text-align:center;padding:15px}
+.btn{padding:10px 18px;margin:5px;border:none;border-radius:6px;background:#1565c0;color:#fff;font-weight:bold;cursor:pointer}
+footer{background:#1565c0;color:#fff;text-align:center;padding:12px;border-radius:0 0 10px 10px}
+@media(max-width:768px){.row{flex-direction:column}.image img{height:200px}}
+</style>
+
+<script>
+let currentPage = 0;
+function showPage(n){
+ const pages = document.querySelectorAll('.page');
+ if(n < 0 || n >= pages.length) return;
+ pages[currentPage].classList.remove('active');
+ currentPage = n;
+ pages[currentPage].classList.add('active');
+}
+function nextPage(){ showPage(currentPage + 1); }
+function prevPage(){ showPage(currentPage - 1); }
+window.onload = () => showPage(0);
+</script>
+</head>
+<body>
+
+<header>
+<h1>ALNASAR ISLAMIC SCHOOL</h1>
+<p>Play Group to Class Five | English Medium</p>
+</header>
+
+<nav>
+<a href="#" onclick="showPage(0)">Home</a>
+<a href="#" onclick="showPage(1)">About</a>
+<a href="#" onclick="showPage(2)">Classes</a>
+<a href="#" onclick="showPage(3)">Gallery</a>
+<a href="#" onclick="showPage(4)">Contact</a>
+</nav>
+
+<div class="container">
+
+<!-- PAGE 1: HOME -->
+<div class="page active">
+ <div class="row">
+  <div class="text">
+   <h2>Welcome to Our School</h2>
+   <p>ALNASAR ISLAMIC SCHOOL provides quality education with Islamic values in a caring and disciplined environment.</p>
+  </div>
+  <div class="image">
+   <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="School Building">
+  </div>
+ </div>
+</div>
+
+<!-- PAGE 2: ABOUT -->
+<div class="page">
+ <div class="row">
+  <div class="text">
+   <h2>About Us</h2>
+   <p>Our mission is to develop students academically, morally, and socially from early childhood.</p>
+  </div>
+  <div class="image">
+   <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" alt="Classroom">
+  </div>
+ </div>
+</div>
+
+<!-- PAGE 3: CLASSES -->
+<div class="page">
+ <div class="row">
+  <div class="text">
+   <h2>Classes (1 to 5)</h2>
+   <ul>
+    <li>Play Group</li>
+    <li>Nursery</li>
+    <li>Prep</li>
+    <li>Class One</li>
+    <li>Class Two</li>
+    <li>Class Three</li>
+    <li>Class Four</li>
+    <li>Class Five</li>
+   </ul>
+  </div>
+  <div class="image">
+   <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74" alt="Students">
+  </div>
+ </div>
+</div>
+
+<!-- PAGE 4: GALLERY -->
+<div class="page">
+ <div class="row">
+  <div class="text">
+   <h2>School Gallery</h2>
+   <p>Our students actively participate in learning, activities, and moral development.</p>
+  </div>
+  <div class="image">
+   <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df" alt="School Activity">
+  </div>
+ </div>
+</div>
+
+<!-- PAGE 5: CONTACT -->
+<div class="page">
+ <div class="row">
+  <div class="text">
+   <h2>Contact Us</h2>
+   <p><strong>School:</strong> ALNASAR ISLAMIC SCHOOL</p>
+   <p><strong>Phone:</strong> 03XX-XXXXXXX</p>
+   <p><strong>Address:</strong> Your School Address</p>
+  </div>
+  <div class="image">
+   <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Contact">
+  </div>
+ </div>
+</div>
+
+<div class="controls">
+ <button class="btn" onclick="prevPage()">⬅️ Back</button>
+ <button class="btn" onclick="nextPage()">Next ➡️</button>
+</div>
+
+</div>
+
+<footer>
+<p>© 2026 ALNASAR ISLAMIC SCHOOL</p>
+</footer>
+
+</body>
+</html>
+```
+
+---
+
+## ✅ Requirements Covered
+
+✔️ School name used correctly
+✔️ Classes 1 to 5 included
+✔️ Downloadable / online images used
+✔️ Navigation menu
+✔️ Next & Back buttons
+✔️ HTML + CSS + JavaScript only
+
+---
+
+### Next (Optional)
+
+* Convert into **real 5 separate pages**
+* Add **Admission Form**
+* Upload website online (FREE)
+
+Just tell me 👍
